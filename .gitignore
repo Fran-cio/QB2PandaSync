@@ -1,1 +1,3 @@
-# Placeholder
+node_modules/
+.env
+reports/
