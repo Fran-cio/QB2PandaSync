@@ -101,13 +101,24 @@ Start with:
 3. `docs/FUTURE_INTEGRATION_PLAN.md`
 4. `docs/HOW_TO_FOR_NON_TECHNICAL_USERS.md`
 
-### Run the Sprint 1 executable mock
+### Option A (recommended): Run from GitHub Actions (no local setup)
+1. Open the repository on GitHub.
+2. Go to **Actions**.
+3. Select **Run Invoice Sync Now**.
+4. Click **Run workflow**.
+5. Download the artifact to review:
+   - `reports/latest-sync-report.json`
+   - `state/synced-invoices.json`
+
+### Option B: Run locally
 1. Install Node.js v20+
 2. Run:
    ```sh
    npm run sync:once
    ```
-3. Review the sync summary output (`processed`, `sent`, `failed`, `duplicates`)
+3. Review output files:
+   - `reports/latest-sync-report.json`
+   - `state/synced-invoices.json`
 
 ### Run tests
 ```sh
@@ -142,6 +153,7 @@ See the [open issues](https://github.com/Fran-cio/QB2PandaSync/issues) for upcom
 - [UAT Checklist (Non-Technical)](docs/UAT_CHECKLIST_NON_TECHNICAL.md)
 - [Sprint 1 Execution Pack](docs/SPRINT_1_EXECUTION_PACK.md)
 - [Sprint 1 Tasks](docs/SPRINT_1_TASKS.md)
+- [Script Run Flow](docs/RUN_FLOW.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
