@@ -122,6 +122,10 @@ See the [open issues](https://github.com/Fran-cio/QB2PandaSync/issues) for upcom
 - [Current Manual Process](docs/CURRENT_PROCESS.md)
 - [Future Integration Plan](docs/FUTURE_INTEGRATION_PLAN.md)
 - [How-To for Non-Technical Users](docs/HOW_TO_FOR_NON_TECHNICAL_USERS.md)
+- [Implementation Backlog (Execution-Ready)](docs/IMPLEMENTATION_BACKLOG.md)
+- [Integration Field Mapping](docs/INTEGRATION_FIELD_MAPPING.md)
+- [Operations Runbook](docs/OPERATIONS_RUNBOOK.md)
+- [UAT Checklist (Non-Technical)](docs/UAT_CHECKLIST_NON_TECHNICAL.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
