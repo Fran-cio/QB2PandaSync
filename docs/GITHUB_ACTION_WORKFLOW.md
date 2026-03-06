@@ -1,3 +1,12 @@
+# GitHub Action Workflow File
+
+Because some tokens do not include `workflow` scope, this repository may reject pushes that add `.github/workflows/*.yml`.
+
+If that happens, create this file manually in GitHub UI:
+
+Path: `.github/workflows/sync-now.yml`
+
+```yaml
 name: Run Invoice Sync Now
 
 on:
@@ -49,3 +58,4 @@ jobs:
           git add state/synced-invoices.json
           git commit -m "chore: update sync state [by: workflow/github-actions]"
           git push
+```
