@@ -1,0 +1,14 @@
+{
+  "name": "qb2pandasync",
+  "version": "0.1.0",
+  "description": "QuickBooks to PandaDoc invoice sync (MVP scaffold)",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "sync:once": "node src/index.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

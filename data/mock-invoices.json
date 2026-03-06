@@ -1,0 +1,32 @@
+{
+  "invoices": [
+    {
+      "invoice_id": "INV-1001",
+      "amount": 1500,
+      "due_date": "2026-03-15",
+      "payer": {
+        "name": "Acme LLC",
+        "email": "billing@acme.test"
+      },
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-1002",
+      "amount": 0,
+      "due_date": "2026-03-17",
+      "payer": {
+        "name": "Globex"
+      },
+      "currency": "USD"
+    },
+    {
+      "invoice_id": "INV-1001",
+      "amount": 1500,
+      "due_date": "2026-03-15",
+      "payer": {
+        "name": "Acme LLC"
+      },
+      "currency": "USD"
+    }
+  ]
+}

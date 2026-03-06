@@ -1,0 +1,61 @@
+# GitHub Action Workflow File
+
+Because some tokens do not include `workflow` scope, this repository may reject pushes that add `.github/workflows/*.yml`.
+
+If that happens, create this file manually in GitHub UI:
+
+Path: `.github/workflows/sync-now.yml`
+
+```yaml
+name: Run Invoice Sync Now
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * 1-5"
+
+concurrency:
+  group: qb2pandasync-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run sync
+        env:
+          SYNC_MODE: mock
+          MOCK_INVOICES_PATH: ./data/mock-invoices.json
+        run: npm run sync:once
+
+      - name: Upload sync artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sync-report-${{ github.run_id }}
+          path: |
+            reports/latest-sync-report.json
+            state/synced-invoices.json
+
+      - name: Commit state update
+        run: |
+          if git diff --quiet -- state/synced-invoices.json; then
+            echo "No state changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/synced-invoices.json
+          git commit -m "chore: update sync state [by: workflow/github-actions]"
+          git push
+```
