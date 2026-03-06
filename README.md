@@ -94,11 +94,25 @@ This repository currently contains project documentation and implementation plan
 
 ## Usage
 
-This is a documentation-first stage. Start with:
+### Documentation-first path
+Start with:
 1. `docs/PROJECT_OVERVIEW.md`
 2. `docs/CURRENT_PROCESS.md`
 3. `docs/FUTURE_INTEGRATION_PLAN.md`
 4. `docs/HOW_TO_FOR_NON_TECHNICAL_USERS.md`
+
+### Run the Sprint 1 executable mock
+1. Install Node.js v20+
+2. Run:
+   ```sh
+   npm run sync:once
+   ```
+3. Review the sync summary output (`processed`, `sent`, `failed`, `duplicates`)
+
+### Run tests
+```sh
+npm test
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,6 +140,8 @@ See the [open issues](https://github.com/Fran-cio/QB2PandaSync/issues) for upcom
 - [Integration Field Mapping](docs/INTEGRATION_FIELD_MAPPING.md)
 - [Operations Runbook](docs/OPERATIONS_RUNBOOK.md)
 - [UAT Checklist (Non-Technical)](docs/UAT_CHECKLIST_NON_TECHNICAL.md)
+- [Sprint 1 Execution Pack](docs/SPRINT_1_EXECUTION_PACK.md)
+- [Sprint 1 Tasks](docs/SPRINT_1_TASKS.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
